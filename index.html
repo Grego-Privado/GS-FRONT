@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EnchentesZetta</title>
+  <link rel="stylesheet" href="src/css/reset.css" />
+  <link rel="stylesheet" href="src/css/estilo.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">EnchentesZetta</div>
+      <ul class="menu">
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#publico">Público</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#uso">Uso Diário</a></li>
+      </ul>
+      <button id="modo-toggle" aria-label="Alternar modo escuro">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="problema" class="secao">
+      <div class="container">
+        <div class="texto">
+          <h2>O Problema</h2>
+          <p>Enchentes causam prejuízos e ameaçam vidas todos os anos nas cidades brasileiras.</p>
+          <p>Falta prevenção e monitoramento eficiente para agir a tempo.</p>
+        </div>
+        <img src="src/assets/img/problema.jpg" alt="Cidade alagada com pessoas afetadas" />
+      </div>
+    </section>
+
+    <section id="tecnologias" class="secao">
+      <div class="container">
+        <div class="texto">
+          <h2>Tecnologias</h2>
+          <p>Utilizamos sensores, Arduino, APIs, mapas interativos e comunicação via web.</p>
+          <p>Tudo integrado em tempo real.</p>
+        </div>
+        <img src="src/assets/img/tecnologias.jpg" alt="Tecnologias conectadas monitorando dados" />
+      </div>
+    </section>
+
+    <section id="objetivos" class="secao">
+      <div class="container">
+        <div class="texto">
+          <h2>Objetivos</h2>
+          <p>Antecipar desastres e proteger comunidades vulneráveis com informações confiáveis.</p>
+          <p>Minimizar perdas materiais e salvar vidas.</p>
+        </div>
+        <img src="src/assets/img/objetivos.jpg" alt="Ícones de metas e resultados alcançados" />
+      </div>
+    </section>
+
+    <section id="publico" class="secao">
+      <div class="container">
+        <div class="texto">
+          <h2>Público-Alvo</h2>
+          <p>Governos, Defesa Civil, escolas, bairros com risco e cidadãos preocupados com segurança.</p>
+          <p>A solução é para todos.</p>
+        </div>
+        <img src="src/assets/img/publico.jpg" alt="Pessoas diversas observando dados em tela" />
+      </div>
+    </section>
+
+    <section id="beneficios" class="secao">
+      <div class="container">
+        <div class="texto">
+          <h2>Benefícios</h2>
+          <p>Monitoramento em tempo real, alertas imediatos e interface acessível.</p>
+          <p>Fácil uso por qualquer pessoa.</p>
+        </div>
+        <img src="src/assets/img/beneficios.jpg" alt="Checklists de vantagens tecnológicas" />
+      </div>
+    </section>
+
+    <section id="uso" class="secao">
+      <div class="container">
+        <div class="texto">
+          <h2>Uso Diário</h2>
+          <p>Aplicativo acessível pelo celular, PC e painel comunitário.</p>
+          <p>Consultas rápidas e atualizações frequentes.</p>
+        </div>
+        <img src="src/assets/img/uso.jpg" alt="Pessoa usando app de enchente no smartphone" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EnchentesZetta. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Alternar modo escuro
+    document.getElementById('modo-toggle').onclick = () => {
+      document.body.classList.toggle('dark');
+    };
+
+    // Menu ativo
+    const links = document.querySelectorAll('.menu a');
+    window.addEventListener('scroll', () => {
+      const pos = window.scrollY;
+      links.forEach(link => {
+        const sec = document.querySelector(link.getAttribute('href'));
+        if (sec.offsetTop <= pos + 100 && sec.offsetTop + sec.offsetHeight > pos + 100) {
+          links.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

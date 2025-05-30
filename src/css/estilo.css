@@ -1,0 +1,206 @@
+/* Variáveis para tema claro e escuro */
+:root {
+  --cor-fundo: #f9f9f9;
+  --cor-texto: #222;
+  --cor-primaria: #0077cc;
+  --cor-secundaria: #005fa3;
+  --cor-menu-bg: #ffffff;
+  --cor-menu-texto: #333;
+  --cor-menu-ativo: var(--cor-primaria);
+  --cor-borda: #ddd;
+  --cor-sombra: rgba(0,0,0,0.1);
+}
+
+body.dark {
+  --cor-fundo: #121212;
+  --cor-texto: #e0e0e0;
+  --cor-menu-bg: #1e1e1e;
+  --cor-menu-texto: #bbb;
+  --cor-menu-ativo: #66aaff;
+  --cor-borda: #333;
+  --cor-sombra: rgba(0,0,0,0.7);
+}
+
+/* Reset e base */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+/* Container padrão */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Header e Navbar */
+header {
+  background-color: var(--cor-menu-bg);
+  box-shadow: 0 2px 5px var(--cor-sombra);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--cor-primaria);
+  user-select: none;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--cor-menu-texto);
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: var(--cor-menu-ativo);
+  background-color: var(--cor-menu-ativo);
+  background-color: var(--cor-primaria);
+  color: #fff;
+  box-shadow: 0 2px 8px var(--cor-primaria);
+}
+
+/* Botão modo escuro */
+#modo-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: var(--cor-menu-texto);
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s;
+}
+
+#modo-toggle:hover,
+#modo-toggle:focus {
+  color: var(--cor-primaria);
+  outline: none;
+}
+
+/* Seções */
+.secao {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--cor-borda);
+  background-color: var(--cor-fundo);
+  transition: background-color 0.3s;
+}
+
+.secao:last-child {
+  border-bottom: none;
+}
+
+.secao .texto {
+  flex: 1 1 400px;
+}
+
+.secao img {
+  flex: 1 1 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px var(--cor-sombra);
+  object-fit: cover;
+}
+
+/* Títulos */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--cor-primaria);
+  font-weight: 700;
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: var(--cor-texto);
+}
+
+/* Layout flex das seções: texto e imagem lado a lado */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Inverter ordem em telas pequenas para melhor leitura */
+.secao:nth-child(even) .container {
+  flex-direction: row-reverse;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: var(--cor-menu-bg);
+  color: var(--cor-menu-texto);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--cor-borda);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .secao:nth-child(even) .container {
+    flex-direction: column;
+  }
+  .menu {
+    display: none; /* esconder menu padrão no mobile */
+  }
+}
+
+/* Menu mobile toggle (opcional para melhorar acessibilidade) */
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  #modo-toggle {
+    order: 2;
+  }
+  .logo {
+    order: 1;
+  }
+}
+
+/* Foco visível para acessibilidade */
+a:focus,
+button:focus {
+  outline: 3px solid var(--cor-primaria);
+  outline-offset: 2px;
+}
