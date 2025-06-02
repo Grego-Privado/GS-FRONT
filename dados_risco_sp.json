@@ -1,0 +1,42 @@
+[
+  {
+    "bairro": "Cap\u00e3o Redondo",
+    "chuva_mm": 95,
+    "tipo_risco": "Deslizamento",
+    "risco": "Alto",
+    "lat": -23.6815,
+    "lng": -46.7903
+  },
+  {
+    "bairro": "Jardim \u00c2ngela",
+    "chuva_mm": 88,
+    "tipo_risco": "Deslizamento",
+    "risco": "Alto",
+    "lat": -23.6736,
+    "lng": -46.7359
+  },
+  {
+    "bairro": "Mooca",
+    "chuva_mm": 42,
+    "tipo_risco": "Alagamento",
+    "risco": "M\u00e9dio",
+    "lat": -23.5614,
+    "lng": -46.5975
+  },
+  {
+    "bairro": "Barra Funda",
+    "chuva_mm": 30,
+    "tipo_risco": "Alagamento",
+    "risco": "Baixo",
+    "lat": -23.5254,
+    "lng": -46.6639
+  },
+  {
+    "bairro": "Itaquera",
+    "chuva_mm": 65,
+    "tipo_risco": "Alagamento",
+    "risco": "M\u00e9dio",
+    "lat": -23.5446,
+    "lng": -46.4695
+  }
+]
