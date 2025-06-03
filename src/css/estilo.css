@@ -204,27 +204,22 @@ footer {
 }
 
 /* Foco visível para acessibilidade */
-a:focus,
-button:focus {
-  outline: 3px solid var(--cor-primaria);
-  outline-offset: 2px;
-}
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
+  background: #f0f0f0;
 }
 
-#mapa {
-  height: 800px;
-  width: 90%;
-  margin: 20px auto;
+h1 {
+  background: #004080;
+  color: white;
+  padding: 20px;
+  margin: 0;
 }
 
-#painel {
-  width: 90%;
-  margin: 0 auto 20px;
-  text-align: left;
+#map {
+  height: 90vh;
+  width: 100%;
 }
