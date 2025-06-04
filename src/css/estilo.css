@@ -1,3 +1,11 @@
+@import url('./cabinet-grotesk.css');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Variáveis para tema claro e escuro */
 :root {
   --cor-fundo: #f9f9f9;
@@ -9,6 +17,7 @@
   --cor-menu-ativo: var(--cor-primaria);
   --cor-borda: #ddd;
   --cor-sombra: rgba(0,0,0,0.1);
+  --fonte: 'CabinetGrotesk-Medium';
 }
 
 body.dark {
@@ -23,7 +32,7 @@ body.dark {
 
 /* Reset e base */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--fonte);
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   line-height: 1.6;
@@ -33,6 +42,7 @@ body {
 
 /* Container padrão */
 .container {
+  font-family: var(--fonte);
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
@@ -61,6 +71,7 @@ header {
 }
 
 .logo {
+  font-family: var(--fonte);
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--cor-primaria);
