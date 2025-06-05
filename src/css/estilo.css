@@ -214,23 +214,3 @@ footer {
   }
 }
 
-/* Foco visível para acessibilidade */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background: #f0f0f0;
-}
-
-h1 {
-  background: #004080;
-  color: white;
-  padding: 20px;
-  margin: 0;
-}
-
-#map {
-  height: 90vh;
-  width: 100%;
-}
