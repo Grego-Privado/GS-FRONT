@@ -109,26 +109,6 @@
     <p>&copy; 2025 EnchentesZetta. Todos os direitos reservados.</p>
   </footer>
 
-  <script>
-    // Alternar modo escuro
-    document.getElementById('modo-toggle').onclick = () => {
-      document.body.classList.toggle('dark');
-    };
-
-    // Menu ativo
-    const links = document.querySelectorAll('.menu a');
-    window.addEventListener('scroll', () => {
-      const pos = window.scrollY;
-      links.forEach(link => {
-        const sec = document.querySelector(link.getAttribute('href'));
-        if (sec.offsetTop <= pos + 100 && sec.offsetTop + sec.offsetHeight > pos + 100) {
-          links.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
-
-  <script src="./src/js/slideshow.js"></script>
+  <script src="./src/js/main.js"></script>
 </body>
 </html>
