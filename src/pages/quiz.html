@@ -1,48 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/quiz.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zetta Quiz</title>
+  <link rel="stylesheet" href="../css/estilo.css" />
+  <link rel="stylesheet" href="../css/quiz.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">Zetta Quiz</div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../pages/map.html">Mapa</a></li>
-                <li><a href="../pages/previsao.html">Previsão</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="quiz-container">
-        <h1>Teste seus conhecimentos sobre as enchentes que afetam a região metropolitana de São Paulo.</h1>
-        <div class="quiz">
-            
-            <section id="container-perguntas">
-                <h2 id="pergunta">pergunta aqui</h2>
-                <div id="container-respostas">
-                    <input type="text" id="resposta" placeholder="Digite sua resposta">
-                </div>
-                <button id="proximo">Próxima pergunta</button>
-                <p id="message"></p>
-            </section>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Zetta Quiz</div>
+      <ul class="menu">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="map.html">Mapa</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <section id="container-resultado" class="hidden">
-                <h2>Resultado do quiz</h2>
-                <ul id="lista-resultado"></ul>
-                <button id="restart">Reiniciar</button>
-            </section>
-        </div>
-    </main>
+  <main class="quiz-container">
+    <h2>Teste seus conhecimentos sobre as enchentes que afetam a região metropolitana de São Paulo.</h2>
 
-    <footer>
-        <h5>&copy; 2025-todos os direitos reservados</h5>
-    </footer>
+    <div id="container-perguntas">
+      <div id="pergunta">Carregando pergunta...</div>
+      <input type="text" id="resposta" placeholder="Digite sua resposta" />
+      <button id="proximo">Próxima pergunta</button>
+      <div id="message"></div>
+    </div>
 
+    <div id="container-resultado" class="hidden">
+      <div id="pontuacao"></div>
+      <ul id="lista-resultado"></ul>
+      <button id="reiniciar">Reiniciar</button>
+    </div>
+  </main>
 
-    <script src="../js/quiz.js"></script>
+  <footer>
+    <p>&copy; 2025 - Todos os direitos reservados</p>
+  </footer>
+
+  <script src="../js/quiz.js"></script>
 </body>
 </html>
