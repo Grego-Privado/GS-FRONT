@@ -1,4 +1,3 @@
-
 const API_KEY = '14d0382101f97dbf642f275bdf705bd8';
 
 const bairros = [
