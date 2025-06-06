@@ -42,22 +42,10 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// DECLARANDO AS VARIÁVEIS
+// Hamburguer menu (mobile)
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
 
-const hamburguer = document.querySelector(".hamburguer");
-const headerMenu = document.querySelector(".menu");
-
-//CRIANDO A FUNÇÃO TOGGLE
-
-function toggleMenu(){
-    hamburguer.classList.toggle("active");
-    headerMenu.classList.toggle("active");
-}
-
-//CRIANDO O EVENTO
-
-hamburguer.addEventListener('click',toggleMenu);
-headerMenu.addEventListener('click',(e)=>{
-    if(e.target.classList.contains('item-menu')){
-        toggleMenu();
-}})
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('menu-ativo');
+});
