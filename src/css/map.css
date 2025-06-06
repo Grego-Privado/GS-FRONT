@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "CabinetGrotesk-Medium";
   text-align: center;
   background: var(--cor-fundo);
 }
@@ -32,7 +32,7 @@ h1 {
 }
 
 header {
-  background-color: var(--cor-menu-bg);
+  background-color: var(--cor-borda);
   border-bottom: 1px solid var(--cor-borda);
   box-shadow: 0 2px 4px var(--cor-sombra);
 }
@@ -44,7 +44,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: var(--cor-borda)
 }
 
 .logo {
@@ -84,6 +84,11 @@ nav ul li a:hover {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+footer{
+    background-color: #ddd;
+    margin-top: 22%;
 }
 
 #map {
