@@ -85,6 +85,10 @@
   display: none;
 }
 
+footer{
+    margin-top: 22%;
+}
+
 @media (max-width: 768px) {
   .quiz-container {
     margin: 2rem 1rem;

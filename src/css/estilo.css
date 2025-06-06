@@ -134,6 +134,7 @@ header {
 
 .secao .texto {
   flex: 1 1 400px;
+  margin: 20px;
 }
 
 .secao img {
